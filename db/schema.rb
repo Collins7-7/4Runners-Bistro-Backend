@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_08_140913) do
-
-  create_table "customer", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "user_email"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 2022_11_08_143814) do
 
   create_table "customers", force: :cascade do |t|
     t.string "first_name"
@@ -26,14 +18,6 @@ ActiveRecord::Schema.define(version: 2022_11_08_140913) do
     t.string "user_email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "menu", force: :cascade do |t|
-    t.string "food"
-    t.integer "price"
-    t.string "image"
-    t.integer "restaurant_id"
-    t.boolean "true"
   end
 
   create_table "menus", force: :cascade do |t|
@@ -44,16 +28,6 @@ ActiveRecord::Schema.define(version: 2022_11_08_140913) do
     t.integer "restaurant_id"
   end
 
-  create_table "reservation", force: :cascade do |t|
-    t.integer "customer_id"
-    t.integer "restaurant_id"
-    t.integer "seat"
-    t.integer "time"
-    t.boolean "true"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "reservations", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "restaurant_id"
@@ -62,13 +36,6 @@ ActiveRecord::Schema.define(version: 2022_11_08_140913) do
     t.boolean "true"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "restaurant", force: :cascade do |t|
-    t.string "name"
-    t.string "opening_time"
-    t.string "closing_time"
-    t.string "image"
   end
 
   create_table "restaurants", force: :cascade do |t|
