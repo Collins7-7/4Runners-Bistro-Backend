@@ -6,8 +6,7 @@ class Menu < ActiveRecord::Migration[6.1]
       t.string :image
       t.integer :restaurant_id
       t.boolean :true
-      t.timestamps
-
+      
     end
   end
 end
