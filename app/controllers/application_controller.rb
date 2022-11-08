@@ -7,4 +7,9 @@ class ApplicationController < Sinatra::Base
     
   end
 
+  get "/menus" do
+    menu = Menu.all
+    menu.to_json
+  end
+
 end
