@@ -28,6 +28,15 @@ class ApplicationController < Sinatra::Base
     customer_reservation.to_json
   end
 
+  patch "/customers/reservations/:id" do 
+    patch_customer = Reservation.find(params[:id])
+    patch_customer.update(
+      seats: params[:seats],
+      time: params[:time]
+    )
+    patch_customer.to_json
+  end 
+
   get "/menus" do
     menu = Menu.all
     menu.to_json
