@@ -30,5 +30,4 @@ class ApplicationController < Sinatra::Base
 
   post "/customers" do
   end
-end
 
