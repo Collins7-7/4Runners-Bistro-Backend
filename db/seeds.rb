@@ -3,11 +3,25 @@ puts "🌱 Customers..."
 Customer.all.destroy_all
 
 10.times do
-    Customer.create(first_name: Faker::Name.first_name, 
-        last_name: Faker::Name.last_name, user_email: Faker::Internet.email)
+    Customer.create(user_name: Faker::Name.name, user_email: Faker::Internet.email)
   end
 
-puts "🌱 Menu..."
+puts "🌱 Reservation..."
+
+Customer.all.each do |customer|
+  3.times do 
+    Reservation.create(
+      customer_id: customer.id,
+      restaurant_id: 1,
+      name: customer.user_name,
+      email:customer.user_email,
+      phone_number: Faker::PhoneNumber.phone_number,
+      seats: rand(1...10),
+      time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now),
+      space: true
+    )
+  end
+end
 
 Menu.create(food: "Beef Steak", price: rand(200...500), 
 image: "https://images.pexels.com/photos/323682/pexels-photo-323682.jpeg?
@@ -48,53 +62,6 @@ auto=compress&cs=tinysrgb&w=1600",availability: true, restaurant_id: 1)
 Menu.create(food:"Fries", price: rand(200...500), 
 image: "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?
 auto=compress&cs=tinysrgb&w=1600",availability: true, restaurant_id: 1)
-
-puts "🌱 Reservation..."
-
-Reservation.create(customer_id: 1, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 2, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 3, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 4, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 5, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 6, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 7, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 8, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 9, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 10, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 1, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 3, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 4, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 7, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
-
-Reservation.create(customer_id: 9, restaurant_id: 1, seats: rand(1...10), 
-time: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now), space: true)
 
 puts "🌱 Restaurants..."
 
