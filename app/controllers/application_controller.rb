@@ -11,12 +11,14 @@ class ApplicationController < Sinatra::Base
   post "/customers/reservations/:id" do
     reservation = Reservation.create(customer_id: params[:id], restaurant_id: 1,
        seats: params[:seats], time: params[:time])
+    end
   end
 
   get "/customers/reservations/:id" do
     customer_reservation = Customer.find(params[:id])
     customer_reservation.to_json(only: [:first_name, :last_name], 
       include: {reservations: {only: [:seats, :time]}})
+    
   end
 
   get "/menus" do
@@ -25,3 +27,5 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/customers" do
+  end
+
