@@ -23,27 +23,24 @@ ActiveRecord::Schema.define(version: 2022_11_09_095715) do
     t.string "food"
     t.integer "price"
     t.string "image"
-    t.boolean "availability"
+    t.boolean "true"
     t.integer "restaurant_id"
   end
 
   create_table "reservations", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "restaurant_id"
-    t.string "name"
-    t.string "email"
-    t.integer "phone_number"
-    t.integer "seats"
-    t.string "time"
-    t.boolean "space"
+    t.integer "seat"
+    t.integer "times"
+    t.boolean "true"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
-    t.string "opening_time"
-    t.string "closing_time"
+    t.integer "opening_time"
+    t.integer "closing_time"
     t.string "image"
   end
 

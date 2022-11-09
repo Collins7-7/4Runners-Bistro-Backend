@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
     customer_reservation = Customer.find(params[:id])
     customer_reservation.to_json(only: [:first_name, :last_name], 
       include: {reservations: {only: [:seats, :time]}})
-    end
+    
   end
 
   get "/menus" do
@@ -28,4 +28,4 @@ class ApplicationController < Sinatra::Base
 
   post "/customers" do
   end
-end
+
