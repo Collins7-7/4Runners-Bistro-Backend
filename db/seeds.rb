@@ -9,7 +9,7 @@ Customer.all.destroy_all
 puts "🌱 Reservation..."
 
 Customer.all.each do |customer|
-  3.times do 
+  1.times do 
     Reservation.create(
       customer_id: customer.id,
       restaurant_id: 1,

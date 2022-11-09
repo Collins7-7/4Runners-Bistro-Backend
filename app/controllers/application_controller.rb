@@ -10,14 +10,16 @@ class ApplicationController < Sinatra::Base
 
   post "/customers/reservations/:id" do
     reservation = Reservation.create(customer_id: params[:id], restaurant_id: 1,
-       seats: params[:seats], time: params[:time])
-    end
+      name: params[:name], email: params[:email], phone_number: params[:phone_number],
+       seats: params[:seats], time: params[:time], space: params[:space])
+
+    reservation.to_json   
   end
 
   get "/customers/reservations/:id" do
     customer_reservation = Customer.find(params[:id])
-    customer_reservation.to_json(only: [:first_name, :last_name], 
-      include: {reservations: {only: [:seats, :time]}})
+
+    customer_reservation.to_json(include: {reservations: {only: [:seats, :time, :space]}})
     
   end
 
@@ -27,9 +29,5 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/customers" do
-  end
-  delete "/customers/reservations/:id" do
-    customer_reservation = Customer.find(params[:id]).destroy_all
-    customer_reservation.to_json
   end
 
