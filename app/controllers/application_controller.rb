@@ -28,4 +28,8 @@ class ApplicationController < Sinatra::Base
 
   post "/customers" do
   end
+  delete "/customers/reservations/:id" do
+    customer_reservation = Customer.find(params[:id]).destroy_all
+    customer_reservation.to_json
+  end
 
