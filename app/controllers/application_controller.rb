@@ -22,6 +22,11 @@ class ApplicationController < Sinatra::Base
     customer_reservation.to_json(include: {reservations: {only: [:seats, :time, :space]}})
     
   end
+  delete "/customers/reservations/:id" do
+    customer_reservation = Customer.find(params[:id])
+    customer_reservation.destroy
+    customer_reservation.to_json
+  end
 
   get "/menus" do
     menu = Menu.all
@@ -30,4 +35,5 @@ class ApplicationController < Sinatra::Base
 
   post "/customers" do
   end
+end
 
