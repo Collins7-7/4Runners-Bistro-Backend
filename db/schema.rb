@@ -31,8 +31,11 @@ ActiveRecord::Schema.define(version: 2022_11_08_140913) do
   create_table "reservations", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "restaurant_id"
+    t.string "name"
+    t.string "email"
+    t.integer "phone_number"
     t.integer "seats"
-    t.integer "time"
+    t.string "time"
     t.boolean "space"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -40,8 +43,8 @@ ActiveRecord::Schema.define(version: 2022_11_08_140913) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
-    t.integer "opening_time"
-    t.integer "closing_time"
+    t.string "opening_time"
+    t.string "closing_time"
     t.string "image"
   end
 
