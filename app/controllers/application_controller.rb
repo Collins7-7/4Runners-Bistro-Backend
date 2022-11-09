@@ -12,4 +12,11 @@ class ApplicationController < Sinatra::Base
     menu.to_json
   end
 
+  post "/customers" do
+
+    customer = Customer.create(first_name: params[:first_name], last_name: params[:last_name],
+    user_name: params[:user_email])
+    customer.to_json
+  end 
+
 end
