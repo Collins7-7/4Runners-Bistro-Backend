@@ -25,20 +25,3 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/customers" do
-    customer = Customer.create(first_name: params[:first_name], last_name: params[:last_name],
-    user_email: params[:user_email])
-    customer.to_json
-  end 
-
-  get "/restaurants/customers" do
-    customers = Customer.all
-    customers.to_json
-  end
-
-  post "customers/reservation/:id" do
-    
-  end
-
-  
-
-end
