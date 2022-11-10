@@ -52,5 +52,10 @@ class ApplicationController < Sinatra::Base
     restaurant = Restaurant.find(params[:id])
     restaurant.to_json
   end
+
+  get "/customers" do
+    customers = Customer.all
+    customers.to_json
+  end
 end
 

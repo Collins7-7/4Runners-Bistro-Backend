@@ -3,7 +3,8 @@ puts "🌱 Customers..."
 Customer.all.destroy_all
 
 10.times do
-    Customer.create(user_name: Faker::Name.name, user_email: Faker::Internet.email)
+    Customer.create(user_name: Faker::Name.name, user_email: Faker::Internet.email,
+    password: Faker::Internet.password)
   end
 
 puts "🌱 Reservation..."
