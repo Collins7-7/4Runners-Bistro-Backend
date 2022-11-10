@@ -16,10 +16,15 @@ class ApplicationController < Sinatra::Base
     reservation.to_json   
   end
 
+  get "/reservations" do
+    reservations = Reservation.all
+    reservations.to_json
+  end
+
   get "/customers/reservations/:id" do
     customer_reservation = Customer.find(params[:id])
 
-    customer_reservation.to_json(include: {reservations: {only: [:seats, :time, :space]}})
+    customer_reservation.to_json(include: {reservations: {only: [:seats, :time, :phone_number, :space]}})
     
   end
 
