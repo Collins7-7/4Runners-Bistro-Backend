@@ -25,54 +25,54 @@ Customer.all.each do |customer|
 end
 
 Menu.create(food: "Beef Steak", price: rand(200...500), 
-image: ["https://images.pexels.com/photos/323682/pexels-photo-323682.jpeg?
-auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/3535383/pexels-photo-3535383.jpeg?auto=compress&cs=tinysrgb&w=400",
-"https://images.pexels.com/photos/11267128/pexels-photo-11267128.jpeg?auto=compress&cs=tinysrgb&w=400"],availability: true, restaurant_id: 1)
+image: "https://images.pexels.com/photos/323682/pexels-photo-323682.jpeg?
+auto=compress&cs=tinysrgb&w=1600", image_one: "https://images.pexels.com/photos/3535383/pexels-photo-3535383.jpeg?auto=compress&cs=tinysrgb&w=400",
+image_two:"https://images.pexels.com/photos/11267128/pexels-photo-11267128.jpeg?auto=compress&cs=tinysrgb&w=400",availability: true, restaurant_id: 1)
 
 Menu.create(food: "Sushi", price: rand(200...500), 
-image: ["https://images.pexels.com/photos/10360199/pexels-photo-10360199.jpeg?
-auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/670702/pexels-photo-670702.jpeg?auto=compress&cs=tinysrgb&w=400",
-"https://images.pexels.com/photos/684964/pexels-photo-684964.jpeg?auto=compress&cs=tinysrgb&w=400"],availability: true, restaurant_id: 1)
+image: "https://images.pexels.com/photos/10360199/pexels-photo-10360199.jpeg?
+auto=compress&cs=tinysrgb&w=1600", image_one:"https://images.pexels.com/photos/670702/pexels-photo-670702.jpeg?auto=compress&cs=tinysrgb&w=400",
+image_two:"https://images.pexels.com/photos/684964/pexels-photo-684964.jpeg?auto=compress&cs=tinysrgb&w=400",availability: true, restaurant_id: 1)
 
 Menu.create(food:"Cake", price: rand(200...500), 
-image: ["https://images.pexels.com/photos/1721932/pexels-photo-1721932.jpeg?
-auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=400",
-"https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=400"],availability: true, restaurant_id: 1)
+image:"https://images.pexels.com/photos/1721932/pexels-photo-1721932.jpeg?
+auto=compress&cs=tinysrgb&w=1600", image_one:"https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=400",
+image_two:"https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=400",availability: true, restaurant_id: 1)
 
 Menu.create(food:"Pasta", price: rand(200...500), 
-image: ["https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?
-auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/2456435/pexels-photo-2456435.jpeg?auto=compress&cs=tinysrgb&w=400",
-"https://images.pexels.com/photos/1460872/pexels-photo-1460872.jpeg?auto=compress&cs=tinysrgb&w=400"],availability: true, restaurant_id: 1)
+image: "https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?
+auto=compress&cs=tinysrgb&w=1600", image_one: "https://images.pexels.com/photos/2456435/pexels-photo-2456435.jpeg?auto=compress&cs=tinysrgb&w=400",
+image_two:"https://images.pexels.com/photos/1460872/pexels-photo-1460872.jpeg?auto=compress&cs=tinysrgb&w=400",availability: true, restaurant_id: 1)
 
 Menu.create(food:"Pizza", price: rand(200...500), 
-image: ["https://images.pexels.com/photos/845812/pexels-photo-845812.jpeg?
-auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/3343626/pexels-photo-3343626.jpeg?auto=compress&cs=tinysrgb&w=400",
-"https://images.pexels.com/photos/2762942/pexels-photo-2762942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],availability: true, restaurant_id: 1)
+image: "https://images.pexels.com/photos/845812/pexels-photo-845812.jpeg?
+auto=compress&cs=tinysrgb&w=1600", image_one:"https://images.pexels.com/photos/3343626/pexels-photo-3343626.jpeg?auto=compress&cs=tinysrgb&w=400",
+image_two:"https://images.pexels.com/photos/2762942/pexels-photo-2762942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",availability: true, restaurant_id: 1)
 
 Menu.create(food:"Shrimp", price: rand(200...500), 
-image: ["https://images.pexels.com/photos/5639390/pexels-photo-5639390.jpeg?
-auto=compress&cs=tinysrgb&w=1600","https://images.pexels.com/photos/1998920/pexels-photo-1998920.jpeg?auto=compress&cs=tinysrgb&w=400",
-"https://images.pexels.com/photos/1998921/pexels-photo-1998921.jpeg?auto=compress&cs=tinysrgb&w=400"],availability: true, restaurant_id: 1)
+image: "https://images.pexels.com/photos/5639390/pexels-photo-5639390.jpeg?
+auto=compress&cs=tinysrgb&w=1600", image_one:"https://images.pexels.com/photos/1998920/pexels-photo-1998920.jpeg?auto=compress&cs=tinysrgb&w=400",
+image_two:"https://images.pexels.com/photos/1998921/pexels-photo-1998921.jpeg?auto=compress&cs=tinysrgb&w=400",availability: true, restaurant_id: 1)
 
 Menu.create(food:"Burger", price: rand(200...500), 
-image: ["https://images.pexels.com/photos/13163534/pexels-photo-13163534.jpeg?
-auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/2983104/pexels-photo-2983104.jpeg?auto=compress&cs=tinysrgb&w=400",
-"https://images.pexels.com/photos/3864680/pexels-photo-3864680.jpeg?auto=compress&cs=tinysrgb&w=400"],availability: true, restaurant_id: 1)
+image: "https://images.pexels.com/photos/13163534/pexels-photo-13163534.jpeg?
+auto=compress&cs=tinysrgb&w=1600", image_one: "https://images.pexels.com/photos/2983104/pexels-photo-2983104.jpeg?auto=compress&cs=tinysrgb&w=400",
+image_two:"https://images.pexels.com/photos/3864680/pexels-photo-3864680.jpeg?auto=compress&cs=tinysrgb&w=400",availability: true, restaurant_id: 1)
 
 Menu.create(food:"Chicken Wings", price: rand(200...500), 
-image: ["https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?
-auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400",
-"https://images.pexels.com/photos/14226662/pexels-photo-14226662.jpeg?auto=compress&cs=tinysrgb&w=400"],availability: true, restaurant_id: 1)
+image: "https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?
+auto=compress&cs=tinysrgb&w=1600", image_one: "https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400",
+image_two:"https://images.pexels.com/photos/14226662/pexels-photo-14226662.jpeg?auto=compress&cs=tinysrgb&w=400",availability: true, restaurant_id: 1)
 
 Menu.create(food:"Vegetable salad", price: rand(200...500), 
-image: ["https://images.pexels.com/photos/764925/pexels-photo-764925.jpeg?
-auto=compress&cs=tinysrgb&w=1600","https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=400",
-"https://images.pexels.com/photos/2122294/pexels-photo-2122294.jpeg?auto=compress&cs=tinysrgb&w=400"],availability: true, restaurant_id: 1)
+image: "https://images.pexels.com/photos/764925/pexels-photo-764925.jpeg?
+auto=compress&cs=tinysrgb&w=1600",image_one:"https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=400",
+image_two:"https://images.pexels.com/photos/2122294/pexels-photo-2122294.jpeg?auto=compress&cs=tinysrgb&w=400",availability: true, restaurant_id: 1)
 
 Menu.create(food:"Fries", price: rand(200...500), 
-image: ["https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?
-auto=compress&cs=tinysrgb&w=1600", "https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=400",
-"https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg?auto=compress&cs=tinysrgb&w=400"],availability: true, restaurant_id: 1)
+image: "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?
+auto=compress&cs=tinysrgb&w=1600", image_one:"https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=400",
+image_two:"https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg?auto=compress&cs=tinysrgb&w=400",availability: true, restaurant_id: 1)
 
 puts "🌱 Restaurants..."
 

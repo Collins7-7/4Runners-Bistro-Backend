@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_10_125917) do
+ActiveRecord::Schema.define(version: 2022_11_10_133625) do
 
   create_table "customers", force: :cascade do |t|
     t.string "user_name"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2022_11_10_125917) do
     t.string "image"
     t.boolean "availability"
     t.integer "restaurant_id"
+    t.string "image_one"
+    t.string "image_two"
   end
 
   create_table "reservations", force: :cascade do |t|
