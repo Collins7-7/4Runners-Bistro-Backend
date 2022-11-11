@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
   end
 
 
-  post "/customers/reservations/:id" do
+  post "/customers/reservations" do
     reservation = Reservation.create(customer_id: params[:id], restaurant_id: 1,
       name: params[:name], email: params[:email], phone_number: params[:phone_number],
        seats: params[:seats], time: params[:time], space: params[:space])
