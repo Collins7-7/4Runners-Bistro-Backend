@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
   end
 
 
-  post "/customers/reservations" do
+  post "/reservations" do
     reservation = Reservation.create(restaurant_id: 1,
       name: params[:name], email: params[:email], phone_number: params[:phone_number],
        seats: params[:seats], time: params[:time], space: true)
@@ -29,7 +29,7 @@ class ApplicationController < Sinatra::Base
   end
 
   delete "/customers/reservations/:id" do
-    customer_reservation = Customer.find(params[:id])
+    customer_reservation = Reservation.find(params[:id])
     customer_reservation.destroy
     customer_reservation.to_json
   end
