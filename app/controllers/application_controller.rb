@@ -9,9 +9,9 @@ class ApplicationController < Sinatra::Base
 
 
   post "/customers/reservations" do
-    reservation = Reservation.create(customer_id: params[:id], restaurant_id: 1,
+    reservation = Reservation.create(restaurant_id: 1,
       name: params[:name], email: params[:email], phone_number: params[:phone_number],
-       seats: params[:seats], time: params[:time], space: params[:space])
+       seats: params[:seats], time: params[:time], space: true)
 
     reservation.to_json   
   end
